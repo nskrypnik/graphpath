@@ -21,5 +21,6 @@ setup(name='graphpath',
       entry_points="""
       [console_scripts]
       graphpath = graphpath.graph_cli:main
+      graphpathw = graphpath.gui:main
       """
       )

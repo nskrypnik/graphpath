@@ -38,3 +38,13 @@ d - b - a
 d - c - b - a
 d - b - c - a
 
+To be able use GUI version you(hope you use Ubuntu :-)) should install wxPython first
+
+$ sudo apt-get install python-wxgtk2.8
+
+then
+
+$ bin/graphpathw
+
+Enjoy!
+

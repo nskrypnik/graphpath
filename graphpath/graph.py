@@ -19,6 +19,10 @@ class Node(object):
         else:
             self.neighbours = []
 
+    def add_neighbour(self, node):
+        if not node in self.neighbours:
+            self.neighbours.append(node)
+
     def __repr__(self):
         return "<Node: %s>" % self.name
 
@@ -63,6 +67,9 @@ class Graph(dict):
     @property
     def nodes(self):
         return self.values()
+
+    def add_node(self, node):
+        self[node.name] = node
 
     def import_from_dict(self, graph_dict):
         """
