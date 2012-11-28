@@ -1,0 +1,10 @@
+bin/
+eggs/
+develop-eggs/
+graphpath.egg-info/
+parts/
+*.pyc
+*graphpath.egg-info/
+parts/
+*.pyc
+*.pyo
