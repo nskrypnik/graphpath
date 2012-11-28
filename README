@@ -1,0 +1,40 @@
+Simple python application to traverse graph.
+
+Installation:
+
+clone repository with this code and go to the cloned directory.
+Then:
+
+$ python bootstrap.py
+$ bin/buildout
+$ bin/graphpath --help
+
+Usage: graphpath -f<graph description> -s<source node> -d<destination node>
+
+Options:
+  -h, --help            show this help message and exit
+  -f FILENAME, --file=FILENAME
+                        file with graph description
+  -s START, --start=START
+                        Start node
+  -d DESTINATION, --destination=DESTINATION
+                        Destination node
+
+Here you may specify file with graph description. Description of graph - simple python dict where keys - name of nodes and values - list of neighbours nodes, e.g.:
+
+{
+    'a': ['b', 'c', 'd'],
+    'b': ['a', 'c', 'd'],
+    'c': ['a', 'b', 'd'],
+    'd': ['a', 'b', 'c']
+}
+
+Example:
+
+$ bin/graphpath -f graph.test -sd -da
+d - a
+d - c - a
+d - b - a
+d - c - b - a
+d - b - c - a
+
