@@ -82,9 +82,10 @@ class GraphPannel(wx.Panel):
         self.state = ''
         self.Refresh()
         self.Parent.enable_buttons()
-        for gui_node in self.nodes_to_link:
+        for gui_node in self.nodes_to_get_destination:
             gui_node.color = 'red'
             gui_node.Refresh()
+        self.nodes_to_get_destination = []
 
     def second_node_chosen(self):
         node1, node2 = [g.node for g in self.nodes_to_link]
